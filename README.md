@@ -61,4 +61,90 @@ Portal da Transparência
             ▼
          Power BI
 ```
+# Pipeline de Dados
+
+O desenvolvimento do projeto foi dividido em etapas sequenciais, seguindo uma arquitetura em camadas para garantir organização, rastreabilidade e reutilização dos dados.
+
+## 1. Inventário e validação das bases
+
+A primeira etapa consistiu no levantamento e validação dos arquivos disponibilizados pelo Portal da Transparência.
+
+Foram identificadas as competências disponíveis, verificada a consistência dos layouts e conferida a integridade das bases antes do início do processamento.
+
+Essa etapa permitiu garantir que todas as competências utilizassem a mesma estrutura de dados e que eventuais inconsistências fossem identificadas antes das transformações.
+
+---
+
+## 2. Camada Bronze
+
+Os arquivos originais em formato CSV foram convertidos para o formato Parquet, preservando integralmente as informações disponibilizadas pelo Portal da Transparência.
+
+Essa camada representa uma cópia estruturada dos dados de origem, servindo como base para todas as etapas posteriores de tratamento.
+
+Principais atividades:
+
+* Conversão dos arquivos CSV para Parquet;
+* Padronização da estrutura das bases;
+* Preservação dos dados originais sem alterações de conteúdo.
+
+---
+
+## 3. Camada Silver
+
+Na camada Silver foram realizadas as transformações necessárias para tornar os dados consistentes e adequados para análise.
+
+Entre as principais atividades destacam-se:
+
+* Padronização dos tipos de dados;
+* Conversão de campos monetários;
+* Tratamento de valores ausentes;
+* Padronização de datas;
+* Inclusão da competência de cada registro;
+* Preparação das informações para modelagem analítica.
+
+Essa etapa concentrou o processo de limpeza e organização dos dados.
+
+---
+
+## 4. Camada Gold
+
+Com os dados padronizados, foi construída a camada analítica do projeto.
+
+Nessa etapa foram criadas as tabelas dimensionais e a tabela fato utilizadas no modelo de Business Intelligence.
+
+As principais estruturas desenvolvidas foram:
+
+* Dimensão Competência;
+* Dimensão Órgão;
+* Dimensão Cargo;
+* Dimensão Grupo;
+* Tabela Fato de Remuneração.
+
+A separação entre fatos e dimensões permitiu a construção de um modelo otimizado para consultas analíticas.
+
+---
+
+# Modelagem Dimensional
+
+Os dados foram organizados utilizando o modelo Star Schema, amplamente empregado em soluções de Business Intelligence.
+
+Essa abordagem simplifica os relacionamentos entre as tabelas, melhora o desempenho das consultas e facilita a construção de indicadores e dashboards no Power BI.
+
+A modelagem permite realizar análises temporais, comparações entre órgãos, cargos e grupos, além de suportar diferentes níveis de agregação das informações.
+
+---
+
+# Dashboard
+
+Após a construção da camada analítica, os dados foram importados para o Power BI, onde foram desenvolvidos indicadores e visualizações voltados à análise da folha de pagamento do Estado de São Paulo.
+
+Entre as análises implementadas destacam-se:
+
+* Evolução temporal da remuneração;
+* Comparação entre órgãos;
+* Indicadores de remuneração média;
+* Distribuição dos gastos com pessoal;
+* Rankings e filtros dinâmicos para exploração das informações.
+
+O dashboard foi desenvolvido com foco na clareza das informações e na navegação intuitiva, permitindo diferentes perspectivas de análise sobre os dados públicos.
 
