@@ -148,3 +148,19 @@ Entre as análises implementadas destacam-se:
 
 O dashboard foi desenvolvido com foco na clareza das informações e na navegação intuitiva, permitindo diferentes perspectivas de análise sobre os dados públicos.
 
+Status do Projeto
+
+Este projeto encontra-se em desenvolvimento contínuo e está sendo publicado gradualmente.
+
+Nas próximas atualizações serão disponibilizados:
+
+Código-fonte completo, organizado por etapas do pipeline de dados;
+Documentação técnica detalhando as decisões de implementação;
+Explicações sobre cada script e sua função no processo de tratamento dos dados;
+Capturas de tela e atualizações do dashboard desenvolvido em Power BI;
+Melhorias na documentação e exemplos de utilização.
+
+Devido às limitações de armazenamento do GitHub, não será possível disponibilizar integralmente todas as bases de dados utilizadas no projeto. Como alternativa, serão disponibilizados arquivos de exemplo, juntamente com a documentação necessária para reprodução do pipeline utilizando os dados públicos obtidos no Portal da Transparência do Estado de São Paulo.
+
+O objetivo é que o repositório evolua gradualmente, documentando não apenas o resultado final, mas também o processo de desenvolvimento e as decisões técnicas adotadas durante a construção do projeto.
+
